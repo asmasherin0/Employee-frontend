@@ -1,0 +1,97 @@
+/* Full screen center layout */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card box */
+.container {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+/* Title */
+h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input fields */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.15rem rgba(78, 115, 223, 0.25);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #4e73df;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+}
+
+.btn-success {
+  background-color: #1cc88a;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #17a673;
+}
+
+/* Link */
+a {
+  color: #4e73df;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Validation message */
+.text-danger {
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

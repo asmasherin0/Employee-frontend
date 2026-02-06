@@ -1,0 +1,42 @@
+<!-- <div class="container mt-5 col-md-4">
+  <h3 class="text-center mb-3">Login</h3>
+
+  <input [(ngModel)]="data.username" class="form-control mb-2" placeholder="Username">
+
+  <input [(ngModel)]="data.password" type="password" class="form-control mb-2" placeholder="Password">
+
+  <button (click)="login()" class="btn btn-primary w-100">Login</button>
+
+  <p class="text-center mt-3">
+    Don't have an account?
+    <a routerLink="/register">Register</a>
+  </p>
+</div> -->
+
+
+<div class="container mt-5 col-md-4" [formGroup]="form">
+  <h3 class="text-center mb-3">Login</h3>
+
+  <!-- Username -->
+  <input formControlName="username" class="form-control mb-1" placeholder="Username">
+
+  @if (form.get('username')?.invalid && form.get('username')?.touched) {
+    <div class="text-danger mb-2">Username is required</div>
+  }
+
+  <!-- Password -->
+  <input formControlName="password" type="password" class="form-control mb-1" placeholder="Password">
+
+  @if (form.get('password')?.invalid && form.get('password')?.touched) {
+    <div class="text-danger mb-2">Password is required</div>
+  }
+
+  <button (click)="login()" class="btn btn-primary w-100" [disabled]="form.invalid">
+    Login
+  </button>
+
+  <p class="text-center mt-3">
+    Don't have an account?
+    <a routerLink="/register">Register</a>
+  </p>
+</div>

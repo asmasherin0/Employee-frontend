@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h3 class="mb-3">Employee Management</h3>
+
+  <!-- Form -->
+  <div class="card p-3 mb-4">
+    <h5>{{ editingId ? 'Edit Employee' : 'Add Employee' }}</h5>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <input formControlName="name" class="form-control mb-2" placeholder="Name">
+      <input formControlName="email" class="form-control mb-2" placeholder="Email">
+      <input formControlName="salary" class="form-control mb-2" placeholder="Salary">
+
+      <button class="btn btn-success w-100" [disabled]="form.invalid">
+        {{ editingId ? 'Update' : 'Add' }}
+      </button>
+    </form>
+  </div>
+
+  <!-- Table -->
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      @for (emp of employees; track emp.id) {
+        <tr>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.salary }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="edit(emp)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="delete(emp.id)">Delete</button>
+          </td>
+        </tr>
+      }
+
+    </tbody>
+  </table>
+</div>

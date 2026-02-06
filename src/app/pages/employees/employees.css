@@ -1,0 +1,99 @@
+/* Page spacing */
+.container {
+  max-width: 1000px;
+}
+
+/* Page title */
+h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form card */
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Card heading */
+.card h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.form-control {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #d1d3e2;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.15rem rgba(78,115,223,0.25);
+}
+
+/* Buttons */
+.btn-success {
+  border-radius: 8px;
+  height: 44px;
+  font-weight: 500;
+  background-color: #1cc88a;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #17a673;
+}
+
+/* Table */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Table header */
+.table thead {
+  background-color: #4e73df;
+  color: white;
+}
+
+.table th {
+  font-weight: 500;
+  padding: 12px;
+}
+
+/* Table rows */
+.table td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+/* Row hover effect */
+.table tbody tr:hover {
+  background-color: #f8f9fc;
+}
+
+/* Action buttons */
+.btn-warning {
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.btn-danger {
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table {
+    font-size: 13px;
+  }
+}
