@@ -1,4 +1,4 @@
 export const environment={
-  production:false,
+  production:true,
   apiUrl:'https://employee-backend-homm.onrender.com/api/v1'
 };
